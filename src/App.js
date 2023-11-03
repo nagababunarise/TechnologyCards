@@ -37,18 +37,20 @@ const cardsList = [
 ]
 
 const App = () => (
-  <div className="technology-bg-con">
-    <h1 className="heading">Learn 4.0 Technologies</h1>
-    <p className="paragraph">
-      Get trained by alumin of IITs and top companies like Amazon, FlipKart,
-      Apple,Microsoft and etc... Learn directly from professinals involved in
-      Product Development.
-    </p>
-    <ul>
-      {cardsList.map(eachObj => (
-        <CardItem sourceObj={eachObj} key={eachObj.id} />
-      ))}
-    </ul>
+  <div className="app-container">
+    <div className="list-container">
+      <h1 className="heading">Learn 4.0 Technologies</h1>
+      <p className="para">
+        Get trained by alumin of IITs and top companies like Amazon, FlipKart,
+        Apple,Microsoft and etc... Learn directly from professinals involved in
+        Product Development.
+      </p>
+      <ul className="cards-list">
+        {cardsList.map(eachItem => (
+          <CardItem sourceObj={eachItem} key={eachItem.id} />
+        ))}
+      </ul>
+    </div>
   </div>
 )
 
